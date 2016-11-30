@@ -1,0 +1,120 @@
+/* body */
+body{
+	font: $font-size-base/$line-height-base $font-family-base;
+	color: $text-color;
+	background-color: $body-color;
+	/*overflow-y: scroll;*/
+}
+
+/*body::-webkit-scrollbar{
+    width: 5px;
+}*/
+
+/*Reset fonts for relevant elements*/
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+/*link*/
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+}
+/*Img*/
+img{
+	vertical-align: middle;
+}
+
+/*iOS "clickable elements" fix for role="button"
+Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+for traditionally non-focusable elements with role="button"
+see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile*/
+
+[role="button"] {
+	cursor: pointer;
+}
+
+/*wrapper*/
+.wrapper{
+	padding-left: calc(100vw - 100%);
+	.wrapper-inner{
+		width: $wrapper-width;
+		margin: 0 auto;
+		h2{
+			color: #666;
+			font-size: 16px;
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+.g-clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.g-clearfix{
+	*zoom: 1;
+}
+
+.detail-cont-wrap{
+	float: right;
+	width: calc(100% - 210px - 40px);
+	padding: 0 20px;
+	h1{
+		padding: 20px 0;
+		color: #666;
+		font-size: 22px;
+	}
+}
+
+.tri{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+}
+
+.breadcrumb{
+	padding: 10px 20px;
+	margin: 0 -20px 20px -20px;
+  background: #e9ecf2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	font-size: 14px;
+	li{
+		float: left;
+		color: #777;
+		.curr{
+			color: #30a5ff;
+		}
+	}
+	li:not(:first-child):before{
+		padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+	}
+}
+.form-line{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.form-line-item{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	margin-right: 20px;
+}
+.form-line-tool{
+	width: 170px;
+}
