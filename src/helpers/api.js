@@ -14,14 +14,6 @@ axios.interceptors.response.use(function (response) {
 })
 
 export default {
-  
-  getUser() {
-    return axios.get('/api/auth')
-          .then(_res => {
-              return _res.data
-            })
-  },
-
   login(data) {
     return axios({
       url: '/api/auth',

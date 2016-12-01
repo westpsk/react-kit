@@ -1,0 +1,23 @@
+.form-wrap{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+  background: #fff;
+  form{
+    padding: 15px;
+  }
+  div{
+    padding: 10px;
+  }
+  label{
+    color: #333;
+    padding-right: 10px;
+  }
+  button{
+    margin-right: 10px;
+    padding: 3 10px;
+    border: none;
+    background: #19b955;
+    color: #fff;
+  }
+}

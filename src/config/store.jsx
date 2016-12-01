@@ -4,18 +4,18 @@ import thunkMiddleware from 'redux-thunk'
 import { routerMiddleware } from 'react-router-redux'
 
 export function configureStore(initialState, history) {
-	const store = createStore(
-	  Reducer,
-	  initialState,
-	  compose(
-	    applyMiddleware(
-	      thunkMiddleware,
-	      routerMiddleware(history)
-	    ),
-	    window.devToolsExtension ? window.devToolsExtension() : f => f
-	  )
-	)
+  const store = createStore(
+    Reducer,
+    initialState,
+    compose(
+      applyMiddleware(
+        thunkMiddleware,
+        routerMiddleware(history)
+      ),
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    )
+  )
 
-	return store
+  return store
 
 }

@@ -1,11 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import { getCookie } from 'UtilsHelper'
-import { APPIDCOOKIE } from 'CommonVal'
-
-import Header from '../components/Header/Header'
 import * as AppActions from 'AppAction'
 import * as UserActions from 'UserAction'
 
